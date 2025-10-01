@@ -49,14 +49,20 @@ export default function F1LightsPRO({ active, playing }: F1LightsProps) {
   useEffect(() => {
     if (!playing) return;
 
+    // sonido beep
     if (active > 0 && active <= 5) {
-      beepRef.current?.currentTime = 0;
-      beepRef.current?.play();
+      if (beepRef.current) {
+        beepRef.current.currentTime = 0;
+        beepRef.current.play();
+      }
     }
 
+    // sonido de inicio
     if (active === 0) {
-      startRef.current?.currentTime = 0;
-      startRef.current?.play();
+      if (startRef.current) {
+        startRef.current.currentTime = 0;
+        startRef.current.play();
+      }
     }
   }, [active, playing]);
 

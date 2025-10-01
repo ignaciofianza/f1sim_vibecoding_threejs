@@ -1,5 +1,5 @@
 import { Canvas, useThree } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment } from "@react-three/drei";
 import Track from "./components/Track";
 import F1Lights from "./components/F1Lights";
 import Cars from "./components/Cars";
